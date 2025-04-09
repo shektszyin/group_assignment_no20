@@ -130,12 +130,18 @@ question1(){
     echo "Sum of ODD hexagonal numbers: $odd_sum"
     echo "Sum of EVEN hexagonal numbers: $even_sum"
 
-    # Decision to continue or exit
-    read -p "Do you want to continue (random input) or exit(X/x)? " decision
+        # Ask to continue
+    echo
+    echo "Stay? (1) "
+    echo "Back to menu (random input) "
+    echo "exit (X/x) "
+    read decision
     case $decision in 
+        1) question2;;
         X | x) exit_door;;
         *) main;;
-    esac  
+    esac 
+   
 }
 
 # Question 2 - Square numbers and checks
