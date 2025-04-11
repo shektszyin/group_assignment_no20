@@ -334,7 +334,7 @@ question3(){
      
      
      
-     main(){
+     task3main(){
          clear
          input
      while true; do
@@ -345,17 +345,17 @@ question3(){
                  break
              elif [ $var_a -lt 0 ] && [ $var_b -lt 0 ] && [ $var_c -lt 0 ] && [ $n2 -lt $n1 ]; then
                  echo "All variables must be positive/invalid range (First N must be less/less than the second N) "
-                 main
+                 task3main
              fi
          else
              echo "All variables must be positive/invalid range (First N must be less/less than the second N) "
-             main
+             task3main
          fi
      done
      
      }
      
-     main
+     task3main
 
      # Ask to continue
      echo
