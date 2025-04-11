@@ -356,7 +356,18 @@ question3(){
      }
      
      task3main
-     
+       
+    # Ask to continue
+    echo
+    echo "Stay? (1) "
+    echo "Back to menu (random input) "
+    echo "exit (X/x) "
+    read decision
+    case $decision in 
+        1) question3;;
+        X | x) exit_door;;
+        *) main;;
+    esac 
 }
 
 # Start the program
