@@ -274,19 +274,22 @@ question3(){
          prime_num_count=0
          num_string=''
          first_num_check=$n1
-         
+
          while [ $n1 -le $n2 ]; do
+             # Calculating the quadratic sequence
              power_of_two=$(( n1 * n1 ))
              a_calc=$(( $var_a * $power_of_two ))
              b_calc=$(( $var_b * $n1 ))
              quad_seq_sum=$((a_calc + $b_calc + $var_c))
              
              prime_checker
-             
+
+             #Checks if it's the first sum
              if [ $n1 -eq $n2 ]; then
                  last_num=$quad_seq_sum
              fi
-             
+
+             # Checks if it's the last sum
              if [ $first_num_check -eq $n1 ]; then
                  first_num=$quad_seq_sum
              fi
@@ -353,6 +356,18 @@ question3(){
      }
      
      main
+
+     # Ask to continue
+     echo
+     echo "Stay? (1) "
+     echo "Back to menu (random input) "
+     echo "exit (X/x) "
+     read decision
+     case $decision in 
+         1) question2;;
+         X | x) exit_door;;
+         *) main;;
+     esac 
      
 }
 
