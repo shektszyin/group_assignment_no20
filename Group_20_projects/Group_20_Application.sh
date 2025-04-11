@@ -354,7 +354,6 @@ question3(){
      
      main
      
-     main
 }
 
 # Start the program
